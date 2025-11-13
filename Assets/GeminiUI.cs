@@ -4,31 +4,6 @@ using System.Collections; // if using TextMeshPro
 
 public class GeminiUI : MonoBehaviour
 {
-    ///public TMP_InputField inputField;
-    //public TMP_Text outputText;
-
-    //private GeminiClient gemini;
-
-    //void Start()
-    //{
-    //    gemini = FindObjectOfType<GeminiClient>();
-    //}
-
-    //public void OnSendPressed()
-    //{
-    //    string userPrompt = inputField.text;
-    //    StartCoroutine(SendToGemini(userPrompt));
-    //}
-
-    //private IEnumerator SendToGemini(string prompt)
-    //{
-    //    yield return null;
-    //    gemini.SendPrompt(prompt);
-    //    outputText.text = "Waiting for response...";
-    //    // You can modify GeminiClient to store the latest response in a variable
-    //    // and then update outputText when it arrives
-    //}
-
     private GeminiClient gemini;
 
     void Start()
@@ -63,7 +38,6 @@ public class GeminiUI : MonoBehaviour
             "This approach ensures that the resulting content represents rich high fantasy worldbuilding, distinct from real-world medieval settings" +
             " and grounded in immersive, original lore.";
 
-        //gemini.SendPrompt(prefix + prompt);
         gemini.SendPrompt(prefix + layer1 + layer2 + layer3 + layer4 + layer5 + additionalDescription);
     }
 }
